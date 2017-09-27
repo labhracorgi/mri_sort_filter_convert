@@ -2,11 +2,11 @@
 
 ## Purpose:
 To document the process of sorting, filtering and converting files.
-This repository's contribution is such that it provides a filter for removing data deemed unnecessary to convert to NIFTI as that process in itself is time consuming. Especially on projects with a horde of patient scans.
+This repository's contribution is such that it provides a filter for removing data deemed unnecessary to convert to NIFTI as that process in itself is time consuming. Especially on projects that have a horde of scans from patients.
 
 ## How to run successfully:
 The steps:
-- 1: Use "dicom_sort.py" (from: <<insert github URL>>) on the raw and extracted MR data.
+- 1: Use "dicom_sort.py" (from: https://github.com/pieper/dicomsort) on the raw and extracted MR data.
 - 2: Use "filter.py" on the sorted data.
   -- Remember to specify the correct paths.
 - 3: Use a DICOM to NIFTI converter.
