@@ -7,8 +7,7 @@ This repository's contribution is such that it provides a filter for removing da
 ## How to run successfully:
 The steps:
 - 1: Use "dicom_sort.py" (from: https://github.com/pieper/dicomsort) on the raw and extracted MR data.
-- 2: Use "filter.py" on the sorted data.
-  -- Remember to specify the correct paths.
+- 2: Use "filter.py" on the sorted data. (Remember to specify the correct paths.)
 - 3: Use a DICOM to NIFTI converter.
 
 As of now, the series that are kept after the filtration algorithm is run are:
