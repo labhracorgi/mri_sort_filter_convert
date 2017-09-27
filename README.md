@@ -23,6 +23,6 @@ The algorithms may as well only be applicable to (our) TOS7 MR data, as it is te
 Finally, the data should be sorted similarly to BIDS (http://bids.neuroimaging.io/) with a structure as:
 ".../study/subject_ID/series_X/*.dcm"
 
-If the files are structured as illustrated, then it this "filter.py" should be usable if the identification "keys" are renamed to match the local naming convention.
+If the files are structured as illustrated then "filter.py" should be usable if also the identification "keys" are renamed to match the local naming convention.
 
 
