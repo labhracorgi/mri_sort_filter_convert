@@ -2,7 +2,7 @@
 
 ## Purpose:
 To document the process of sorting, filtering and converting files.
-This repository's contribution is such that it provides a filter for removing data deemed unnecessary to convert to NIFTI as that process in itself is time consuming.
+This repository's contribution is such that it provides a filter for removing data deemed unnecessary to convert to NIFTI as that process in itself is time consuming. Especially on projects with a horde of patient scans.
 
 ## How to run successfully:
 The steps:
