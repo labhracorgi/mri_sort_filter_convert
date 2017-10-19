@@ -72,7 +72,7 @@ for i in id_dir_list:
         modal_iter = modal_iter + 1
         #End modality iteration.
     
-    #Write to trouble file if more than 3 keys have been successfully matched.
+    #Write to trouble file if more than 4 keys have been successfully matched.
     #As these files have to be inspected more closely.
     similar_directories_flag = False    
     sum_keys = key_1_matched + key_2_matched + key_3_matched + key_4_matched
