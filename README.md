@@ -6,7 +6,7 @@ This repository's contribution is such that it provides a filter for removing da
 
 ## How to run successfully:
 The steps:
-- 1: Use "dicom_sort.py" (from: https://github.com/pieper/dicomsort) on the raw and extracted MR data.
+- 1: Use "dicom_sort.py" (from: https://github.com/pieper/dicomsort) on the raw and extracted MR data. Modifications may be necessary.
 - 2: Use "filter.py" on the sorted data. (Remember to specify the correct paths.)
 - 3: Use a DICOM to NIFTI converter. (DCM2NIIX from: http://neuro.debian.net/pkgs/dcm2niix.html)
 
