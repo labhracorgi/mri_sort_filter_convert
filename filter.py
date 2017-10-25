@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
 Created on Mon Sep 25 13:41:49 2017
@@ -12,10 +13,10 @@ Then: Convert DCM2NII (?)
 """
 
 #Base directory or input directory of the sorted files.
-sorted_dir = "/home/lars/Convert/dicom_sort_copy/"
+sorted_dir = #"/media/lars/LaCie/sorted_fix/"
 
 #We want to have a file where we can write possible errors!
-troubleshoot_dir = "/home/lars/Convert/"
+troubleshoot_dir = "/home/lars/Desktop/sort_filter_convert/filter/"
 troubleshoot_name = "urgent_please_check.txt"
 
 trouble_path = troubleshoot_dir + troubleshoot_name
@@ -34,6 +35,8 @@ key_4 = "SWI_Images"
 
 #Iterate through the IDs.
 for i in id_dir_list:
+    print("\n New ID:")
+    print(str(i))
     
     sub_dir = sorted_dir + i + "/"
     modality_dir_list = os.listdir(sub_dir)
@@ -77,17 +80,21 @@ for i in id_dir_list:
     similar_directories_flag = False    
     sum_keys = key_1_matched + key_2_matched + key_3_matched + key_4_matched
     
-    if(sum_keys > 4):
-        text_to_trouble = i + "," + str(sum_keys) + "\n"
+    check_extra_string = str(sum_keys) + "," + str(key_1_matched) + "," + str(key_2_matched) + "," + str(key_3_matched) + "," + str(key_4_matched)
+    print(check_extra_string)
+    
+    if(sum_keys > 4 or key_1_matched == 0 or key_2_matched == 0 or key_3_matched == 0 or key_4_matched == 0):
+        text_to_trouble = i + "," + str(sum_keys) + "," + str(key_1_matched) + "," + str(key_2_matched) + "," + str(key_3_matched) + "," + str(key_4_matched) + "\n"
         trouble_file.write(text_to_trouble)
         similar_directories_flag = True
+        print("Warning: Missing, or too many series...")
     
     #Iterate through rename_index to change names
     modal_iter = 0
     rename_count = 0
     for k in rename_index:
         
-        if(k>0 & similar_directories_flag == False):
+        if(k>0 and similar_directories_flag == False):
             if(k == 1):
                 old_name = modality_dir_list[modal_iter]
                 new_name = key_1
@@ -120,7 +127,7 @@ for i in id_dir_list:
                 
                 os.rename(old_path,new_path)
         
-        if(k>0 & similar_directories_flag == True):
+        if(k>0 and similar_directories_flag == True):
             if(k == 1):
                 old_name = modality_dir_list[modal_iter]
                 new_name = key_1 + "_" + str(rename_count)
