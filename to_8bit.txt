@@ -1,0 +1,4 @@
+fslstats 3d_tof.nii -R
+fslmaths 3d_tof.nii -div <<insert max value>> -mul 256 3d_tof_8bit.nii -odt char
+gunzip 3d_tof_8bit.nii.gz
+fslstats 3d_tof_8bit.nii -R
