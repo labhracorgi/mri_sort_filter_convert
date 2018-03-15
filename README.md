@@ -28,6 +28,6 @@ Or more specifcally the "dicomsort.py" pattern used in our case:
 If the files are structured as illustrated then "filter.py" should be usable if also the identification "keys" are renamed to match the local naming convention.
 
 ## Issues:
-There has been spotted multiple report of duplicates. After investigating the issue we concluded that the "dicomsort.py" algorithm can produce false positives as there were no duplicates at all in the source folder used.
+There has been spotted multiple reports of duplicates. After investigating the issue we concluded that the "dicomsort.py" algorithm can produce false positives; as there were no duplicates at all in the source folder used.
 A possible workaround is to use the "-k" flag when calling "dicomsort.py" from the shell.
 
