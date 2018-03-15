@@ -21,6 +21,7 @@ The algorithms may as well only be applicable to (our) TOS7 MR data, as it is te
 
 Finally, the data should be sorted similarly to BIDS (http://bids.neuroimaging.io/) with a structure as:
 ".../study/subject_ID/series_X/*.dcm"
+
 Or more specifcally in our case:
 "Destination/%PatientName/%SeriesNumber-%SeriesDescription/%InstanceNumber.dcm"
 
