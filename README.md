@@ -17,14 +17,17 @@ As of now, the series that are kept after the filtration algorithm is run are:
 - TOF
 
 ## Regarding reusability:
-The algorithms may as well only be applicable to (our) TOS7 MR data, as it is tested on these data. This narrow applicability is due to unique or local scanner naming convention paired with the "dicom_sort.py" algorithm; which further changes the name of folders.
+The algorithms may as well only be applicable to (our) TOS7 MR data, as it is tested on these data. This narrow applicability is due to unique or local scanner naming convention paired with the "dicomsort.py" algorithm; which further changes the name of folders.
 
 Finally, the data should be sorted similarly to BIDS (http://bids.neuroimaging.io/) with a structure as:
 ".../study/subject_ID/series_X/*.dcm"
 
-Or more specifcally in our case:
+Or more specifcally the "dicomsort.py" pattern used in our case:
 "Destination/%PatientName/%SeriesNumber-%SeriesDescription/%InstanceNumber.dcm"
 
 If the files are structured as illustrated then "filter.py" should be usable if also the identification "keys" are renamed to match the local naming convention.
 
+## Issues:
+There has been spotted multiple report of duplicates. After investigating the issue we concluded that the "dicomsort.py" algorithm can produce false positives as there were no duplicates at all in the source folder used.
+A possible workaround is to use the "-k" flag when calling "dicomsort.py" from the shell.
 
