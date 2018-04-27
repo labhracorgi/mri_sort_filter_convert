@@ -27,8 +27,11 @@ Or more specifcally the "dicomsort.py" pattern used in our case:
 
 If the files are structured as illustrated then "filter.py" should be usable if also the identification "keys" are renamed to match the local naming convention.
 
+## The "other" functions:
+Handling of duplicate series within an ID from "filter.py" left unique numbered strings as a way of differentiating them. A pre-nifit-convert correction of names by removing the last two characters in the string is thus provided. The two remaining functions are simply there to assist with creating a "working directory" and to compare IDs in folder more efficiently.
+
 ## Issues:
-There has been spotted multiple reports of duplicates. After investigating the issue we concluded that the "dicomsort.py" algorithm can produce false positives; but there may be cases of individuals having double DICOM ID. As such it is recommended to verify the amount and the IDs of the sorted images.
+There has been spotted multiple reports of duplicates. After investigating the issue we concluded that the "dicomsort.py" algorithm can produce false positives; which in the end was traced back to erroneous labeling of DICOM IDs. As such it is recommended to verify the amount and the IDs of the sorted images.
 A possible workaround is to use the "-k" flag when calling "dicomsort.py" from the shell.
 The "-v" flag can also be used to easily create log files when piping in BaSh.
 
