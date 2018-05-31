@@ -16,6 +16,10 @@ As of now, the series that are kept after the filtration algorithm is run are:
 - SWI
 - TOF
 
+### Run with:
+- Debian 9
+- Python 2.7.X
+
 ## Regarding reusability:
 The algorithms may as well only be applicable to (our) TOS7 MR data, as it is tested on these data. This narrow applicability is due to unique or local scanner naming convention paired with the "dicomsort.py" algorithm; which further changes the name of folders.
 
