@@ -34,7 +34,8 @@ If the files are structured as illustrated then "filter.py" should be usable if 
 ## The "other" functions:
 - "rename_wrong_series_dir.py": Handles duplicate series within an ID from "filter.py" left unique numbered strings as a way of differentiating them. A pre-nifit-convert correction of names by removing the last two characters in the string is thus provided. 
 - "copy_from_to.py": Assists in creating a copy & working directory of original/back-up copy.
-- "read_ids_to_txt.py": Reads the folder IDs (e.g. per BIDS style) such that they can be used more easily for future comparison. - "extract_dicom.py": Is a pydicom (https://github.com/pydicom/pydicom) based script to retrieve the DICOM files' meta information for further verification and correction checks.
+- "read_ids_to_txt.py": Reads the folder IDs (e.g. per BIDS style) such that they can be used more easily for future comparison. 
+- "extract_dicom.py": Is a pydicom (https://github.com/pydicom/pydicom) based script to retrieve the DICOM files' meta information for further verification and correction checks.
 - "PID_controll.R": Is simply a script that is supposed to verify Norwegian personal security numbers.
 - "ubo_cns_copyfier_workspace.py": Is a function similar to "copy_from_to.py" and also assumes BIDS, but this is designed such that it creates a workspace as required by a WMH segmentation algorithm, named UBO (https://cheba.unsw.edu.au/content/quick-start-manual and https://doi.org/10.1016/j.neuroimage.2018.03.050).
 
