@@ -31,7 +31,7 @@ Or more specifcally the "dicomsort.py" pattern used in our case:
 
 If the files are structured as illustrated then "filter.py" should be usable if also the identification "keys" are renamed to match the local naming convention.
 
-## The "other" functions:
+## The "other" assisting functions:
 - "rename_wrong_series_dir.py": Handles duplicate series within an ID from "filter.py" left unique numbered strings as a way of differentiating them. A pre-NIFTI-convert correction of names by removing the last two characters in the string is thus provided. 
 - "copy_from_to.py": Assists in creating a copy & working directory of original/back-up copy.
 - "read_ids_to_txt.py": Reads the folder IDs (e.g. per BIDS style) such that they can be used more easily for future comparison. 
