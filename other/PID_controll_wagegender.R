@@ -150,12 +150,12 @@ determine_age = function(num_vector,ref_age){
   
   #Calculating age at time of scan:
   two_year_char = as.character(two_year)
-  fifth_sixth_year = paste(two_year_char[1],two_year_char[2])
+  fifth_sixth_year = paste(two_year_char[1],two_year_char[2],sep="")
   if(pre_1900){
-    this_age = as.numeric(paste("20",age_reference)) - as.numeric(paste("18",fifth_sixth_year))
+    this_age = as.numeric(paste("20",age_reference,sep="")) - as.numeric(paste("18",fifth_sixth_year,sep=""))
     #Case: Scanned in 20XX and born in 18XX
   }else{
-    this_age = as.numeric(paste("20",age_reference)) - as.numeric(paste("19",fifth_sixth_year))
+    this_age = as.numeric(paste("20",age_reference,sep="")) - as.numeric(paste("19",fifth_sixth_year,sep=""))
     #Case: Scanned in 20XX and born in 19XX
   }
   
